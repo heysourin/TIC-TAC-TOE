@@ -36,3 +36,6 @@ jobs:
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/tic-tac-toe:latest
         env:
           DOCKER_CLI_ACI: 1
+
+      - name: Image scan
+        run: trivy image tic-tac-toe:latest > trivyimage.txt
