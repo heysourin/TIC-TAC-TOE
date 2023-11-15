@@ -49,5 +49,3 @@ jobs:
 
       - name: Deploy to container
         run: docker run -d --name game -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/tic-tac-toe:latest
-
-      - name:
